@@ -1653,9 +1653,11 @@ body{
         margin-bottom: 8px;
     }
 
-    .study-course__card-details{
-        max-height: none;
+    .hr{
+        width: calc(100% + 48px);
+        margin-left: -24px;
     }
+
 }
 
 @media (max-width: 600px){
