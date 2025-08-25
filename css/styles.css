@@ -426,7 +426,7 @@ body{
 }
 
 .font-size-89{
-    font-size: clamp(50px, 6vw, 89px);
+    font-size: clamp(50px, 4vw, 89px);
 }
 
 .target-audience__cards {
@@ -1070,7 +1070,7 @@ body{
 }
 
 .reviews__slide-bg {
-    width: 440px;
+    width: 430px;
     height: 599px;
     border-radius: 50px;
     background-size: cover;
@@ -1083,6 +1083,7 @@ body{
     margin: 0 auto;
     transform-origin: center;
     transition: transform 0.3s ease;
+    border: 1px solid var(--color-medium-gray);
 }
 
 .reviews__play-button {
@@ -1093,8 +1094,8 @@ body{
 }
 
 .reviews__play-icon {
-    width: 80px;
-    height: 80px;
+    width: 127px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1106,6 +1107,7 @@ body{
     backdrop-filter: blur(7.58px);
     border-radius: 40px;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .reviews__play-icon:hover {
@@ -1210,8 +1212,155 @@ body{
     align-items: center;
   }
 
+  .study-course__title{
+    font-family: var(--font-benzin);
+    font-size: clamp(32px, 6vw, 48px);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    line-height: 125%;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+  } 
 
-@media (max-width: 1200px) {
+.study-course__card{
+    background: rgba(255, 255, 255, 0.068);
+    background-blend-mode: plus-lighter;
+    mix-blend-mode: normal;
+    box-shadow: -11.1504px -10.392px 48px -12px rgba(0, 0, 0, 0.15), -1.8584px -1.732px 12px -8px rgba(0, 0, 0, 0.15), inset 2.14645px 2.00046px 9.24px rgba(255, 255, 255, 0.126), inset 1.21725px 1.13446px 4.62px rgba(255, 255, 255, 0.126);
+    backdrop-filter: blur(7.58px);
+    border-radius: 36px;
+
+    max-width: 440px;
+    width: 100%;
+    padding: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.study-course__card-text{
+    font-size: 16px;
+    font-family: var(--font-space-grotesk);
+    color: var(--color-medium-gray);
+    font-weight: var(--font-weight-regular);
+    line-height: 135%;
+    margin-bottom: 16px;
+    margin-top: 6px;
+}
+.hr{
+    background-color: #383838;
+    width: calc(100% + 64px);
+    height: 1px;
+    margin-left: -32px;
+    box-sizing: border-box;
+}
+
+.study-course__card-title{
+    font-family: var(--font-benzin);
+    font-size: 29px;
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    line-height: 125%;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.study-course__card-link{
+    font-family: var(--font-space-grotesk);
+    font-size: 16px;
+    color: #777777;
+    font-weight: var(--font-weight-regular);
+    line-height: 135%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.study-course__card-link svg{
+    transition: transform 0.3s ease;
+}
+.study-course__card-details{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0;
+}
+
+.study-course{
+    margin-top: clamp(204px, 16vw, 236px);
+}
+
+.study-course__cards{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.study-course__floating-title{
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    text-align: center;
+    font-family: var(--font-benzin);
+    font-size: clamp(32px, 6vw, 48px);
+    font-weight: var(--font-weight-regular);
+    line-height: 90%;
+    color: var(--color-white);
+    pointer-events: none;
+}
+
+.study-course__card.expanded .study-course__card-details{
+    max-height: 800px;
+    padding: 16px 0 0 0;
+}
+
+.study-course__card-feature{
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.study-course__card-feature-icon{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.07);
+    background-blend-mode: plus-lighter;
+    mix-blend-mode: normal;
+    box-shadow: 12px 11px 48px -12px rgba(0, 0, 0, 0.15), 2px 2px 12px -8px rgba(0, 0, 0, 0.15), inset 2px 2.00046px 9px rgba(255, 255, 255, 0.12), inset 1.5px 1px 4.5px rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(7.58px);
+    border-radius: 40px;
+}
+
+.study-course__card-feature span{
+    font-family: var(--font-space-grotesk);
+    font-size: 15px;
+    color: #808080;
+    line-height: 135%;
+}
+
+.study-course__card-link--cta{
+    font-weight: var(--font-weight-bold);
+    padding: 16px 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    width: 100%;
+}
     .reviews__slide-bg {
         transform: scale(0.9);
     }
@@ -1219,7 +1368,17 @@ body{
     .reviews__slider .swiper-slide {
         height: calc(599px * 0.9);
     }
-}
+
+    @media (max-width: 1114px){
+        .study-course__cards{
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        .study-course__card{
+            max-width: 100%;
+        }
+    }
 
 @media (max-width: 1024px) {
     .reviews__slide-bg {
@@ -1343,7 +1502,6 @@ body{
     }
 
     .advantages__card{
-        padding: 24px;
         max-width: 100%;
     }
 
@@ -1459,6 +1617,44 @@ body{
         font-size: 30px;
         width: 40px;
         height: 40px;
+    }
+
+    .study-course{
+        margin-top: clamp(139px, 12vw, 171px);
+    }
+
+    .study-course__cards{
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .study-course__floating-title{
+        position: absolute;
+        top: -58px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        text-align: center;
+        font-family: var(--font-benzin);
+        font-size: clamp(32px, 6vw, 48px);;
+        font-weight: var(--font-weight-regular);
+        line-height: 90%;
+        color: var(--color-white);
+        pointer-events: none;
+    }
+
+    .study-course__card{
+        max-width: 100%;
+        padding: 24px;
+    }
+
+    .study-course__card-feature{
+        margin-bottom: 8px;
+    }
+
+    .study-course__card-details{
+        max-height: none;
     }
 }
 
