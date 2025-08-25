@@ -8,6 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
         burger.classList.toggle('active');
         mobileMenu.classList.toggle('active');
         body.classList.toggle('menu-open');
+        
+        // Управление sticky позиционированием хедера
+        const header = document.querySelector('.header');
+        console.log('Header found:', header);
+        console.log('Mobile menu active:', mobileMenu.classList.contains('active'));
+        
+        if (mobileMenu.classList.contains('active')) {
+            header.style.setProperty('position', 'static', 'important');
+            console.log('Setting header position to static');
+        } else {
+            header.style.setProperty('position', 'sticky', 'important');
+            console.log('Setting header position to sticky');
+        }
     }
 
     // Обработчик клика по бургеру
@@ -20,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
+            
+            // Восстанавливаем sticky позиционирование
+            const header = document.querySelector('.header');
+            header.style.position = 'sticky';
         });
     });
 
@@ -29,6 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
+            
+            // Восстанавливаем sticky позиционирование
+            const header = document.querySelector('.header');
+            header.style.position = 'sticky';
         }
     });
 
@@ -38,6 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
+            
+            // Восстанавливаем sticky позиционирование
+            const header = document.querySelector('.header');
+            header.style.position = 'sticky';
         }
     });
+
+
 });
