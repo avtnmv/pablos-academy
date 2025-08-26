@@ -72,11 +72,13 @@ html{
     background-color: var(--color-black);
     scroll-behavior: smooth;
     height: 100%;
+    scroll-padding-top: 96px; /* Отступ при скролле к якорям для компенсации навбара */
 }
 
 body{
     overflow-x: hidden;
     min-height: 100vh;
+    padding-top: 96px; /* Компенсация для зафиксированного навбара */
 }
 
 .color{
@@ -110,8 +112,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0;
-    padding-top: 20px;
+    padding: 96px 0 0 0; /* Отступ под зафиксированный навбар */
 }
 
 .header__top{
@@ -120,6 +121,18 @@ body{
     justify-content: space-between;
     gap: 32px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    padding: 20px 0;
+
+background: rgba(0, 0, 0, 0.05);
+background-blend-mode: plus-lighter;
+backdrop-filter: blur(10px);
+
+
 }
 
 .header__bottom{
@@ -1732,6 +1745,18 @@ body{
     font-size: 16px;
 }
 
+.footer__bottom-left a{
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer__bottom-left a:hover{
+    color: var(--color-primary);
+}
+
 .footer__bottom-center{
     color: #808080;
     font-family: var(--font-space-grotesk);
@@ -1876,9 +1901,18 @@ body{
 }
 
 @media (max-width: 968px) {
+    html {
+        scroll-padding-top: 80px; /* Меньший отступ при скролле для мобильных */
+    }
+    
+    body {
+        padding-top: 80px; /* Меньший padding для мобильных */
+    }
+    
     .header {
         height: 100vh;
         min-height: 600px;
+        padding-top: 80px;
     }
     
     .header__nav {
@@ -1897,6 +1931,9 @@ body{
     
     .header__top {
         justify-content: space-between;
+    }
+    .header__top{
+        padding: var(--container-padding);
     }
 }
 

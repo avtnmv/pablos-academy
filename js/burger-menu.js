@@ -9,17 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('active');
         body.classList.toggle('menu-open');
         
-        // Управление sticky позиционированием хедера
-        const header = document.querySelector('.header');
-        console.log('Header found:', header);
-        console.log('Mobile menu active:', mobileMenu.classList.contains('active'));
+        // Управление navbar при мобильном меню
+        const headerTop = document.querySelector('.header__top');
         
         if (mobileMenu.classList.contains('active')) {
-            header.style.setProperty('position', 'static', 'important');
-            console.log('Setting header position to static');
+            headerTop.classList.add('menu-open');
+            document.body.style.paddingTop = '0px';
         } else {
-            header.style.setProperty('position', 'sticky', 'important');
-            console.log('Setting header position to sticky');
+            headerTop.classList.remove('menu-open');
+            const paddingTop = window.innerWidth <= 968 ? '80px' : '96px';
+            document.body.style.paddingTop = paddingTop;
         }
     }
 
@@ -33,10 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
-            
-            // Восстанавливаем sticky позиционирование
-            const header = document.querySelector('.header');
-            header.style.position = 'sticky';
         });
     });
 
@@ -46,10 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
-            
-            // Восстанавливаем sticky позиционирование
-            const header = document.querySelector('.header');
-            header.style.position = 'sticky';
         }
     });
 
@@ -59,10 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.remove('active');
             mobileMenu.classList.remove('active');
             body.classList.remove('menu-open');
-            
-            // Восстанавливаем sticky позиционирование
-            const header = document.querySelector('.header');
-            header.style.position = 'sticky';
         }
     });
 
