@@ -87,6 +87,8 @@ html{
     .header {
         height: 100vh;
         height: -webkit-fill-available; /* Для Safari на iOS */
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
     }
     
     .header__top {
@@ -123,6 +125,8 @@ body{
     z-index: 1000;
     height: 100vh;
     height: 100dvh; /* Динамическая высота viewport для мобильных */
+    min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     background-image: url(../img/header-bg.webp);
     background-size: cover;
@@ -160,7 +164,7 @@ body{
     flex: 1;
     width: 100%;
     gap: 32px;
-    margin-bottom: 48px;
+    margin-bottom: 80px;
 }
 
 .header__bottom-content{
@@ -195,7 +199,7 @@ body{
 }
 .header__bottom-text{
     font-family: var(--font-space-grotesk);
-    font-size: clamp(16px, 2.2vw, 23px);
+    font-size: clamp(16px, 2.2vw, 20px);
     color: var(--color-white);
     line-height: 130%;
     margin-bottom: 24px;
@@ -247,6 +251,7 @@ body{
     text-transform: uppercase;
     font-family: var(--font-benzin);
     margin-left: auto;
+    font-weight: var(--font-weight-bold);
 }
 
 .header__burger {
@@ -396,6 +401,7 @@ body{
     height: 72px;
     width: 100%;
     font-size: clamp(14px, 2.5vw, 24px);
+    font-weight: var(--font-weight-bold);
 }
 
 /* Main content styles */
@@ -847,7 +853,6 @@ body{
 .about-us__card-content{
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: flex-start;
 }
 
@@ -1413,7 +1418,6 @@ body{
     font-weight: var(--font-weight-regular);
     line-height: 90%;
     color: var(--color-white);
-    text-align: center;
     margin-bottom: 64px;
 }
 
@@ -1473,7 +1477,7 @@ body{
 .autolayout_title{
     font-family: var(--font-benzin);
     font-size: 48px;
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-bold);
     line-height: 120%;
     color: var(--color-white);
     text-align: left;
@@ -1483,10 +1487,11 @@ body{
 
 .autolayout{
     display: inline-block;
-    max-width: 520px;
+    max-width: 537px;
     width: 100%;
     align-self: center;
-    text-align: center;
+    text-align: right;
+    font-weight: var(--font-weight-bold);
 }
 
 .autolayout_container{
@@ -1709,7 +1714,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 599px;
+    max-width: 620px;
     width: 100%;
     gap: 24px;
 }
@@ -1849,6 +1854,7 @@ body{
         flex-direction: column;
         align-items: flex-start;
         justify-content: end;
+        margin-bottom: 100px;
     }
 
     .target-audience__title{
@@ -1952,7 +1958,9 @@ body{
         height: 100vh;
         height: 100dvh; /* Динамическая высота viewport для мобильных */
         height: -webkit-fill-available; /* Для Safari на iOS */
-        min-height: 600px;
+        min-height: 100vh;
+        min-height: 100dvh;
+        min-height: -webkit-fill-available;
         padding-top: 80px;
         padding-top: max(80px, calc(80px + env(safe-area-inset-top))); /* Учитываем safe-area */
     }
@@ -2162,6 +2170,7 @@ body{
     .faq__title{
         font-size: clamp(48px, 8vw, 64px);
         margin-bottom: 32px;
+        text-align: center;
     }
 
     .faq__header{
@@ -2292,8 +2301,15 @@ body{
         height: 100vh;
         height: 100dvh; /* Динамическая высота viewport для мобильных */
         height: -webkit-fill-available; /* Для Safari на iOS */
+        min-height: 100vh;
+        min-height: 100dvh;
+        min-height: -webkit-fill-available;
         padding-top: max(80px, calc(80px + env(safe-area-inset-top))); /* Учитываем safe-area */
     }
+    .header__bottom{
+        margin-bottom: 120px;
+    }
+    
     .header__bottom-text{
         text-align: center;
     }
@@ -2318,6 +2334,7 @@ body{
         font-size: 32px;
         max-width: 307px;
         margin: auto;
+        font-weight: var(--font-weight-bold);
     }
      .autolayout_container{
          gap: 24px;
