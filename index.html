@@ -19,43 +19,46 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__top container">
-            <div class="header__logo">
-                <img src="./img/logo.webp" alt="logo" width="145" height="55" class="header__logo-img">
+        <div class="header__blur-bg"></div>
+        <div class="header__top">
+            <div class="header__container">
+                <div class="header__logo">
+                    <img src="./img/logo.webp" alt="logo" width="145" height="55" class="header__logo-img">
+                </div>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#target-audience" class="header__nav-link">Для кого</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#advantages" class="header__nav-link">Переваги</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#about-us" class="header__nav-link">Про нас</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#program" class="header__nav-link">Програма</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#faq" class="header__nav-link">Питання</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#reviews" class="header__nav-link">Відгуки</a>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="header__cta">
+                        <span class="header__cta-text">Приєднатись</span>
+                        <svg class="header__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M18.5 5.5v13h-3v-7.883l-9.09 9.09-2.117-2.117 9.09-9.09H5.5v-3z" fill="#101010" stroke="#101010"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                    </a>
+                </nav>
+
+                <button class="header__burger" type="button" aria-label="Открыть меню">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
             </div>
-
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item">
-                        <a href="#target-audience" class="header__nav-link">Для кого</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#advantages" class="header__nav-link">Переваги</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#about-us" class="header__nav-link">Про нас</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#program" class="header__nav-link">Програма</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#faq" class="header__nav-link">Питання</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#reviews" class="header__nav-link">Відгуки</a>
-                    </li>
-                </ul>
-
-                <a href="#contact" class="header__cta">
-                    <span class="header__cta-text">Приєднатись</span>
-                    <svg class="header__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M18.5 5.5v13h-3v-7.883l-9.09 9.09-2.117-2.117 9.09-9.09H5.5v-3z" fill="#101010" stroke="#101010"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
-                </a>
-            </nav>
-
-            <button class="header__burger" type="button" aria-label="Открыть меню">
-                <span class="header__burger-line"></span>
-                <span class="header__burger-line"></span>
-            </button>
         </div>
 
         <div class="header__bottom container">
@@ -367,13 +370,15 @@
                         <div class="about-us__card-back">
                             <button class="about-us__card-close"></button>
                             <div class="about-us__card-back-content">
+
                                 <ul class="about-us__card-back-list">
-                                    <li>4 роки досвіду в арбітражі</li>
-                                    <li>Вертикалі: крипта, гемблінг, сьорфід</li>
-                                    <li>Трафік: Facebook, Google</li>
-                                    <li>Гео: tier 1, 2, 3</li>
-                                    <li>Cпенди: $100 000 - $150 000+</li>
-                                    <li>ROI: 60-70%</li>
+                                    <li>Team Lead у Pablos Team</li>
+                                    <li>4 роки досвіду</li>
+                                    <li>Вертикалі: фінанси, крипта, гемблінг, sweepstake</li>
+                                    <li>Працює з гео tier 1, 2</li>
+                                    <li>Cпенди від $80 000 до $150 000+</li>
+                                    <li>ROI: 300%+</li>
+                                    <li>На курсі допомагає підібрати правильний стратегічний напрям і дає індивідуальний фідбек</li>
                                 </ul>
                             </div>
                         </div>
@@ -445,13 +450,12 @@
                             <button class="about-us__card-close"></button>
                             <div class="about-us__card-back-content">
                                 <ul class="about-us__card-back-list">
-                                    <li>Team Lead у Pablos Team</li>
-                                    <li>4 роки досвіду</li>
-                                    <li>Вертикалі: фінанси, крипта, гемблінг, sweepstake</li>
-                                    <li>Працює з гео tier 1, 2</li>
-                                    <li>Cпенди від $80 000 до $150 000+</li>
-                                    <li>ROI: 300%+</li>
-                                    <li>На курсі допомагає підібрати правильний стратегічний напрям і дає індивідуальний фідбек</li>
+                                    <li>4 роки досвіду в арбітражі</li>
+                                    <li>Вертикалі: крипта, гемблінг, сьорфід</li>
+                                    <li>Трафік: Facebook, Google</li>
+                                    <li>Гео: tier 1, 2, 3</li>
+                                    <li>Cпенди: $100 000 - $150 000+</li>
+                                    <li>ROI: 60-70%</li>
                                 </ul>
                             </div>
                         </div>
@@ -1912,5 +1916,6 @@
     <script src="./js/study-course-expand.js"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/contact-form.js"></script>
+    <script src="./js/phone-mask.js"></script>
 </body>
 </html>
